@@ -12,3 +12,6 @@ Welcome to my personal portfolio repository! This is a modern, interactive, and 
 - **Forms & Notifications:** EmailJS, react-hot-toast  
 
 ---
+## 🌐 Live Demo
+
+Check out the live demo of the portfolio [here](https://srinanth.vercel.app/)
