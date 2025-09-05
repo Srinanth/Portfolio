@@ -108,10 +108,10 @@ const Hero: React.FC = () => {
               </div>
 
               <p className="text-gray-300 leading-relaxed mb-8 max-w-xl mx-auto md:mx-0 tw-slide-up">
-                I am a student pursuing Bachelor of Technology (B.Tech) degree in Computer Science and Engineering at Rajiv Gandhi Institute of Technology, Kottayam.
+                I am currently pursuing a Bachelor of Technology (B.Tech) in Computer Science and Engineering at Rajiv Gandhi Institute of Technology, Kottayam. 
                 <br /><br />
-                I’m passionate about exploring Cybersecurity, building AI-powered automation systems, and creating full-stack web applications that combine modern front-end and back-end technologies. My curiosity also drives me to experiment with new tools and frameworks, always looking for innovative ways to solve problems. <br /><br />
-                Looking forward to work on various projects.
+                I have a strong interest in cybersecurity, AI-driven automation, and full-stack web development. I enjoy working with both front-end and back-end technologies and like to challenge myself by learning new frameworks and tools. <br /><br />
+                I’m eager to take on meaningful projects and continue improving my skills through real-world experience.
               </p>
 
               <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-colors tw-ink-reveal">

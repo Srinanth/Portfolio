@@ -8,13 +8,14 @@ import Contact from './components/Contact';
 import Experience from './components/Experience';
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer';
-
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <>
     <div className="bg-gray-900 text-white">
       <Toaster position="top-center" />
+      <Analytics/>
       <Navigation />
       <Hero />
       <Education />
