@@ -124,6 +124,7 @@ const Hero: React.FC = () => {
               <img
                 src="me.png"
                 alt="Profile"
+                draggable="false"
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
