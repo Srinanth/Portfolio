@@ -113,11 +113,14 @@ const Hero: React.FC = () => {
                 I have a strong interest in cybersecurity, AI-driven automation, and full-stack web development. I enjoy working with both front-end and back-end technologies and like to challenge myself by learning new frameworks and tools. <br /><br />
                 I’m eager to take on meaningful projects and continue improving my skills through real-world experience.
               </p>
-
-              <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-colors tw-ink-reveal">
+              <a 
+                href="/Srinanth_MV_CV.pdf" 
+                download="Srinanth_MV_CV.pdf"
+                className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg flex items-center gap-2 transition-all hover:scale-105 active:scale-95 tw-ink-reveal w-fit"
+              >
                 <Download size={18} />
                 Download Resume
-              </button>
+              </a>
             </div>
 
             <div className="hidden md:block w-80 h-80 md:w-96 md:h-96 overflow-hidden border-none tw-fade-in">
