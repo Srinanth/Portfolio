@@ -5,6 +5,27 @@ import { ExternalLink, Github, Lock } from 'lucide-react';
 const projects = [
   {
     id: 1,
+    title: "TempSpace",
+    category: "Web Development",
+    description:
+      "A frictionless file-sharing platform that allows users to create temporary spaces using short codes without requiring authentication. It features automatic expiration and manual destruction mechanisms to ensure secure, non-persistent storage.",
+    tech: ["React", "Node.js", "Supabase", "Tailwind CSS"],
+    status: "completed",
+    github: "https://github.com/Srinanth/TempSpace",
+    live: "https://tempspace.vercel.app", 
+  },
+  {
+    id: 2,
+    title: "OneAI",
+    category: "AI & Automation",
+    description:
+      "A unified, personal AI Application that integrates multiple top-tier LLMs (Gemini, ChatGPT, DeepSeek, Claude, Grok) into a single interface. Features dynamic model routing via OpenRouter and Official APIs, real-time token tracking, and custom context retrieval.",
+    tech: ["Flutter", "Riverpod", "Node.js", "TypeScript", "Supabase", "OpenRouter"],
+    status: "completed",
+    github: "https://github.com/Srinanth/OneAI",
+  },
+  {
+    id: 3,
     title: "Assignment Agent",
     category: "AI & Automation",
     description:
@@ -15,7 +36,7 @@ const projects = [
     live: "https://assignment-agent.vercel.app",
   },
   {
-    id: 2,
+    id: 4,
     title: "ReturnIt",
     category: "AI & Web Development",
     description:
@@ -26,7 +47,7 @@ const projects = [
     live: "https://los-n-found-p783.onrender.com",
   },
   {
-    id: 3,
+    id: 5,
     title: "Ani-JS",
     category: "Web Development",
     description:
@@ -35,28 +56,6 @@ const projects = [
     status: "completed",
     github: "https://github.com/Srinanth/Ani-Js",
     live: "https://ani-js.vercel.app",
-  },
-  {
-    id: 4,
-    title: "IdeaGen",
-    category: "AI & Automation",
-    description:
-      "An AI-powered platform that generates tailored hackathon project ideas based on constraints such as tech stack, time limit, and difficulty level.",
-    tech: ["React", "Node.js", "Gemini API", "TailwindCSS"],
-    status: "completed",
-    github: "https://github.com/Srinanth/SaturdayHackNight",
-    live: "https://ideagenai.vercel.app",
-  },
-  {
-    id: 5,
-    title: "T-Rex Run",
-    category: "Game Development",
-    description:
-      "A revamped version of the classic Chrome Dino game — featuring a T-Rex sprinting through samurai obstacles and flying dragons, set against a scenic animated background.",
-    tech: ["JavaScript", "HTML5 Canvas", "CSS"],
-    status: "completed",
-    github: "https://github.com/Srinanth/T-rex-run",
-    live: "https://srinanth.github.io/T-rex-run/user.html",
   },
   {
     id: 6,
