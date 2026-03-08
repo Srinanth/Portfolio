@@ -4,12 +4,12 @@ import { GraduationCap, Calendar, Award } from 'lucide-react';
 
 const educationItems = [
   {
-    degree: "10th Standard",
-    institution: "ST:Sebastian's Higher Secondary School",
-    period: "2021 - 2022",
-    grade: "96%",
+    degree: "B.Tech in Computer Science and Engineering",
+    institution: "Rajiv Gandhi Institute of Technology, Kottayam",
+    period: "2024 - present",
+    grade: "Pursuing",
     description:
-      "I have successfully completed my 10th standard from ST:Sebastian's Higher Secondary School, a state government institution, with an impressive score of 96%.",
+      "I have joined Rajiv Gandhi Institute of Technology in Kottayam, a prestigious government engineering college, where I am pursuing a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering.",
   },
   {
     degree: "12th Standard",
@@ -17,15 +17,15 @@ const educationItems = [
     period: "2023 - 2024",
     grade: "96%",
     description:
-      "I have successfully completed my 12th standard from ST:Sebastian's Higher Secondary School, a state government institution, with an outstanding score of 96%.",
+    "I have successfully completed my 12th standard from ST:Sebastian's Higher Secondary School, a state government institution, with an outstanding score of 96%.",
   },
   {
-    degree: "B.Tech in Computer Science and Engineering",
-    institution: "Rajiv Gandhi Institute of Technology, Kottayam",
-    period: "2024 - present",
-    grade: "Pursuing",
+    degree: "10th Standard",
+    institution: "ST:Sebastian's Higher Secondary School",
+    period: "2021 - 2022",
+    grade: "96%",
     description:
-      "I have joined Rajiv Gandhi Institute of Technology in Kottayam, a prestigious government engineering college, where I am pursuing a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering.",
+      "I have successfully completed my 10th standard from ST:Sebastian's Higher Secondary School, a state government institution, with an impressive score of 96%.",
   },
 ];
 
