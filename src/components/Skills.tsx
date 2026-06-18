@@ -52,6 +52,42 @@ const skillsData = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.85, y: 12 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 140,
+      damping: 12,
+    },
+  },
+  hover: {
+    y: -3,
+    scale: 1.05,
+    borderColor: "rgba(239, 68, 68, 0.8)",
+    backgroundColor: "rgba(239, 68, 68, 0.15)",
+    color: "#ffffff",
+    boxShadow: "0 6px 15px -3px rgba(239, 68, 68, 0.3)",
+    transition: {
+      type: "spring" as const,
+      stiffness: 300,
+      damping: 15,
+    },
+  },
+};
+
 const Skills: React.FC = () => {
   return (
     <section className="py-20 bg-gray-800" id="skills">
@@ -84,24 +120,25 @@ const Skills: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="flex flex-wrap gap-3"
+              >
+                {category.skills.map((skill) => (
                   <motion.span
                     key={skill.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      duration: 0.3,
-                      delay: categoryIndex * 0.1 + skillIndex * 0.05,
-                    }}
-                    viewport={{ once: true }}
-                    className="px-4 py-2 rounded-full border border-gray-600 bg-gray-900/50 text-gray-300 hover:text-white hover:border-red-500 hover:bg-red-500/20 transition-colors flex items-center gap-2 text-sm"
+                    variants={itemVariants}
+                    whileHover="hover"
+                    className="px-4 py-2 rounded-full border border-gray-600 bg-gray-900/50 text-gray-300 flex items-center gap-2 text-sm cursor-default"
                   >
                     <span className="text-lg">{skill.icon}</span>
                     {skill.name}
                   </motion.span>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

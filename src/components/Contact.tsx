@@ -47,8 +47,8 @@ const Contact: React.FC = () => {
     }
 
     (window as any).emailjs.sendForm(
-      'service_bjv8pao', 
-      'template_c9pnto7',     
+      'service_bjv8pao',
+      'template_c9pnto7',
       e.currentTarget
     ).then(
       () => {
@@ -74,12 +74,12 @@ const Contact: React.FC = () => {
   return (
     <section className="py-20 bg-gray-900" id="contact">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.div 
-        initial={{ opacity: 0, y: 20 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 0.6 }} 
-        viewport={{ once: true }} 
-        className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Establish <span className="text-red-500">Connection</span>
           </h2>
@@ -89,12 +89,12 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="max-w-2xl mx-auto">
-          <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.6, delay: 0.2 }} 
-          viewport={{ once: true }} 
-          className="bg-gray-800 border border-gray-700 rounded-t-lg p-4 font-mono">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-gray-800 border border-gray-700 rounded-t-lg p-4 font-mono">
             <div className="flex items-center gap-2 text-green-400 mb-2">
               <Terminal size={16} />
               <span className="text-xs">secure-contact@portfolio:~$</span>
@@ -105,18 +105,18 @@ const Contact: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.6, delay: 0.4 }} 
-          viewport={{ once: true }} 
-          className="bg-gray-800 border-x border-b border-gray-700 rounded-b-lg p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-gray-800 border-x border-b border-gray-700 rounded-b-lg p-8">
             {connectionStatus === 'ready' && (
-              <motion.form id="contact_form" 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              transition={{ duration: 0.6, delay: 0.5 }} 
-              onSubmit={handleSubmit} className="space-y-6">
+              <motion.form id="contact_form"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="flex items-center gap-2 text-gray-300 mb-2 font-medium"><User size={16} /> Name</label>
                   <input type="text" name="name" value={formData.name} onChange={handleInputChange} required className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors" placeholder="Enter your name" />
@@ -129,21 +129,21 @@ const Contact: React.FC = () => {
                   <label className="flex items-center gap-2 text-gray-300 mb-2 font-medium"><MessageSquare size={16} /> Message</label>
                   <textarea name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors resize-none" placeholder="Enter your message" />
                 </div>
-                <motion.button 
-                whileHover={{ scale: 1.02 }} 
-                whileTap={{ scale: 0.98 }} 
-                type="submit" 
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="submit"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors">
                   <Send size={18} /> Send Message
                 </motion.button>
               </motion.form>
             )}
             {connectionStatus !== 'ready' && (
               <div className="flex items-center justify-center py-12">
-                <motion.div 
-                animate={{ rotate: 360 }} 
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }} 
-                className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full" />
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  className="w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full" />
               </div>
             )}
           </motion.div>
