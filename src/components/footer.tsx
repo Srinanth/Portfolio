@@ -7,10 +7,7 @@ const Footer: React.FC = () => {
     <footer className="py-8 bg-transparent border-t border-gray-700">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-center md:text-left">
-          <p className="text-gray-400">© 2026 Srinanth M V</p>
-          <p className="text-gray-500 text-sm mt-1">
-            Built with React, TailwindCSS,Framer Motion and Ani-Js.
-          </p>
+          <p className="text-gray-400">© 2026 Srinanth M V. All rights reserved.</p>
         </div>
 
         <div className="flex items-center gap-6">
