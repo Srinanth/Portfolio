@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Download, Terminal } from 'lucide-react';
+import React from 'react';
+import { Download } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord, FaWhatsapp } from 'react-icons/fa';
 interface FrameProps {
   children: React.ReactNode;
@@ -18,38 +18,6 @@ const FrameGlassGradient: React.FC<FrameProps> = ({ children, className = '' }) 
 );
 
 const Hero: React.FC = () => {
-  const [typedText, setTypedText] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
-  const fullText = 'ssh srinanth@portfolio.dev';
-  const [commandOutput, setCommandOutput] = useState('');
-  const [connected, setConnected] = useState(false);
-
-  useEffect(() => {
-    let i = 0;
-    const timer = setInterval(() => {
-      if (i < fullText.length) {
-        setTypedText(fullText.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(timer);
-        setTimeout(() => {
-          setShowCursor(false);
-          setCommandOutput('→ connection established');
-          setTimeout(() => setConnected(true), 700);
-        }, 600);
-      }
-    }, 70);
-
-    const cursorTimer = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-
-    return () => {
-      clearInterval(timer);
-      clearInterval(cursorTimer);
-    };
-  }, []);
-
   const renderProfileWithFrame = (className = 'w-full h-full') => (
     <FrameGlassGradient className={className}>
       <img
@@ -106,47 +74,26 @@ const Hero: React.FC = () => {
   return (
     <section id="about" className="min-h-screen bg-transparent relative flex items-center justify-center pt-24 pb-16">
       <div className="relative z-10 px-6 max-w-6xl w-full flex items-center justify-center">
-        {!connected ? (
-          <div className="w-full max-w-lg mx-auto py-12 tw-fade-in">
-            <div className="bg-gray-800/80 border border-gray-700 rounded-lg p-4 font-mono text-left tw-slide-up">
-              <div className="flex items-center gap-2 text-green-400 mb-2">
-                <Terminal size={16} />
-                <span className="text-xs">terminal@portfolio:~$</span>
+        <div className="flex flex-col tw-fade-in w-full animate-fadeIn">
+          <h1 className="text-4xl md:text-6xl font-heading font-black tracking-tight text-white mb-8 text-center md:text-left">
+            Srinanth M V
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+              <div className="md:hidden w-72 h-72 mx-auto mb-6">
+                {renderProfileWithFrame("w-full h-full")}
               </div>
-              <div className="text-gray-300">
-                <span className="text-red-400">$</span> 
-                <span className="tw-typewriter">{typedText}</span>
-                {showCursor && <span className="tw-blink">|</span>}
-              </div>
-              {commandOutput && (
-                <div className="text-green-400 mt-1 tw-fade-in">
-                  {commandOutput}
-                </div>
-              )}
+              {renderSocialLinks()}
+              {renderBioText()}
+              {renderResumeButton()}
             </div>
-          </div>
-        ) : (
-          <div className="flex flex-col tw-fade-in w-full animate-fadeIn">
-            <h1 className="text-4xl md:text-6xl font-heading font-black tracking-tight text-white mb-8 text-center md:text-left">
-              Srinanth M V
-            </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <div className="md:hidden w-72 h-72 mx-auto mb-6">
-                  {renderProfileWithFrame("w-full h-full")}
-                </div>
-                {renderSocialLinks()}
-                {renderBioText()}
-                {renderResumeButton()}
-              </div>
-              <div className="hidden md:flex justify-center items-center">
-                <div className="w-80 h-80 md:w-96 md:h-96">
-                  {renderProfileWithFrame("w-full h-full")}
-                </div>
+            <div className="hidden md:flex justify-center items-center">
+              <div className="w-80 h-80 md:w-96 md:h-96">
+                {renderProfileWithFrame("w-full h-full")}
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

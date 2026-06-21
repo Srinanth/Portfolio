@@ -9,6 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer';
 import { Analytics } from "@vercel/analytics/react"
 import { GlobalBackground } from './components/Backgrounds';
+import TerminalLoader from './components/TerminalLoader';
 
 function App() {
   return (
@@ -17,14 +18,17 @@ function App() {
       <GlobalBackground />
       <Toaster position="top-center" />
       <Analytics/>
-      <Navigation />
-      <Hero />
-      <Experience/>
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer/>
+      
+      <TerminalLoader>
+        <Navigation />
+        <Hero />
+        <Experience/>
+        <Education />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer/>
+      </TerminalLoader>
     </div>
     </>
   );
