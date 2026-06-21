@@ -22,8 +22,8 @@ function App() {
       <TerminalLoader>
         <Navigation />
         <Hero />
-        <Experience/>
         <Education />
+        <Experience/>
         <Projects />
         <Skills />
         <Contact />
