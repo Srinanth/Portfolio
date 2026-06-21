@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-8 bg-gray-800 border-t border-gray-700">
+    <footer className="py-8 bg-transparent border-t border-gray-700">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-center md:text-left">
           <p className="text-gray-400">© 2026 Srinanth M V</p>

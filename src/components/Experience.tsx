@@ -9,9 +9,9 @@ const experiences = [
     period: "Mar 2026 – Present",
     icon: <Briefcase className="w-6 h-6 text-red-500" />,
     description: [
-      "Designed and developed the backend architecture for a highly scalable, multi-tenant AI agent automation platform.",
-      "Implemented secure multi-tenant data isolation and API authentication workflows.",
-      "Optimized backend system performance to support asynchronous AI agent execution and automation pipelines."
+      "Designed and developed backend services for a multi-tenant AI agent automation platform, supporting secure and scalable workflow execution.",
+      "Built and orchestrated 5 specialized AI agents operating asynchronously to enable complex automated workflows.",
+      "Implemented tenant-aware authentication and data isolation mechanisms, ensuring secure access and separation of organizational data."
     ],
   },
   {
@@ -27,13 +27,13 @@ const experiences = [
   },
   {
     title: "Full Stack Developer",
-    company: "Flink",
+    company: "Flink (Remote)",
     period: "Dec 2025 – Present",
     icon: <Briefcase className="w-6 h-6 text-red-500" />,
     description: [
-      "Contributed key frontend and backend features for their flagship product, 'Hostel Finder'.",
-      "Spearheaded the integration of frontend interfaces with backend services to deliver a unified user experience.",
-      "Optimized webpage performance, implemented SEO configurations, and coordinated deployment workflows."
+      "Led development of 'Hostel Finder', building the majority of the application's frontend and core backend functionality.",
+      "Implemented responsive user interfaces, business workflows, and API integrations to support hostel discovery and management features.",
+      "Improved application performance, configured SEO best practices, and coordinated deployment processes for production releases."
     ],
   },
   {
@@ -87,7 +87,7 @@ const iconVariants = {
 
 const Experience: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-900" id="experience">
+    <section className="py-20 bg-transparent" id="experience">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,8 +96,8 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Professional <span className="text-red-500">Journey</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-black tracking-tight text-white mb-4">
+            My <span className="text-red-500">Experience</span>
           </h2>
         </motion.div>
 
@@ -119,7 +119,7 @@ const Experience: React.FC = () => {
               }}
             >
               {/* Subtle hover background highlight */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none" />
 
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 relative z-10">
                 <div className="flex items-center gap-4">
@@ -130,7 +130,7 @@ const Experience: React.FC = () => {
                     {exp.icon}
                   </motion.div>
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-red-100 transition-colors">{exp.title}</h3>
+                    <h3 className="text-xl font-heading font-bold text-white group-hover:text-red-100 transition-colors">{exp.title}</h3>
                     <p className="text-red-500 font-medium">{exp.company}</p>
                   </div>
                 </div>

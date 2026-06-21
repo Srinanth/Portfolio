@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
         )}
       </div>
 
-      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-red-300 transition-colors">
+      <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-red-300 transition-colors">
         {project.title}
       </h3>
       
@@ -158,7 +158,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <section className="py-20 bg-gray-900" id="projects">
+    <section className="py-20 bg-transparent" id="projects">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ const Projects: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-black tracking-tight text-white mb-4">
             My <span className="text-red-500">Projects</span> 
           </h2>
         </motion.div>

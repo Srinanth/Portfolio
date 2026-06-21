@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {FaCode,FaWrench,FaReact,FaNodeJs,FaDatabase,FaPython,FaDocker,FaJava,FaHtml5,FaCss3Alt,FaJs,FaLinux,FaBug,FaSearch,} from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiExpress, SiSupabase, SiFastapi } from "react-icons/si";
+import { FaCode, FaWrench, FaReact, FaNodeJs, FaDatabase, FaPython, FaDocker, FaJava, FaHtml5, FaCss3Alt, FaJs, FaLinux, FaBug, FaSearch } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiExpress, SiSupabase, SiFastapi, SiFlutter, SiDart, SiPostgresql, SiSqlite, SiGithubactions, SiSvelte, SiNextdotjs } from "react-icons/si";
 
 const skillsData = [
   {
@@ -14,15 +14,20 @@ const skillsData = [
       { name: "Python", icon: <FaPython /> },
       { name: "JavaScript", icon: <FaJs /> },
       { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Dart", icon: <SiDart /> },
       { name: "Shell Script", icon: <FaCode /> },
     ],
   },
   {
-    title: "Web Development",
+    title: "Web & App Development",
     icon: <FaCode className="w-5 h-5" />,
     color: "border-blue-500 text-blue-400",
     skills: [
       { name: "React", icon: <FaReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Svelte", icon: <SiSvelte /> },
+      { name: "SvelteKit", icon: <SiSvelte /> },
+      { name: "Flutter", icon: <SiFlutter /> },
       { name: "TailwindCSS", icon: <SiTailwindcss /> },
       { name: "JavaScript", icon: <FaJs /> },
       { name: "HTML5", icon: <FaHtml5 /> },
@@ -30,8 +35,10 @@ const skillsData = [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
       { name: "Firebase", icon: <FaDatabase /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MongoDB", icon: <FaDatabase /> },
       { name: "MySQL", icon: <FaDatabase /> },
+      { name: "SQLite", icon: <SiSqlite /> },
       { name: "Supabase", icon: <SiSupabase /> },
     ],
   },
@@ -42,7 +49,7 @@ const skillsData = [
     skills: [
       { name: "FastAPI", icon: <SiFastapi /> },
       { name: "n8n", icon: <FaWrench /> },
-
+      { name: "CI/CD", icon: <SiGithubactions /> },
       { name: "Kali Linux", icon: <FaLinux /> },
       { name: "Burp Suite", icon: <FaBug /> },
       { name: "Wireshark", icon: <FaSearch /> },
@@ -90,7 +97,7 @@ const itemVariants = {
 
 const Skills: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-800" id="skills">
+    <section className="py-20 bg-transparent" id="skills">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,7 +106,7 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-black tracking-tight text-white mb-4">
             Technical <span className="text-red-500">Skills</span>
           </h2>
         </motion.div>
@@ -115,7 +122,7 @@ const Skills: React.FC = () => {
             >
               <div className="flex items-center gap-2 mb-6">
                 <div className={`${category.color}`}>{category.icon}</div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-heading font-bold text-white">
                   {category.title}
                 </h3>
               </div>
